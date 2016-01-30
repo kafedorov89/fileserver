@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<title>Загрузка файлов для лабораторных работ</title>
+</head>
+<body>
+<p><h1>Загрузка изображений в JPG</h1></p>
+<form enctype="multipart/form-data" action="/upload" method="post">
+Файл для загрузки: <input type="file" name="file_img_name" />
+<br />
+<br />
+<input type="submit" value="Загрузить" />
+</form>
+
+<p><h1>Загрузка текста в SVG</h1></p>
+<form enctype="multipart/form-data" action="/upload" method="post">
+Файл для загрузки: <input type="file" name="file_svg_name" />
+<br />
+<br />
+<input type="submit" value="Загрузить" />
+</form>
+
+<p><h1>Загрузка методичек в PDF</h1></p>
+<form enctype="multipart/form-data" action="/upload" method="post">
+Файл для загрузки: <input type="file" name="file_pdf_name" />
+<br />
+<br />
+<input type="submit" value="Загрузить" />
+</form>
