@@ -3,7 +3,7 @@
 import tornado.httpserver, tornado.ioloop, tornado.options, tornado.web, os.path, random, string
 from tornado.options import define, options
 
-define("port", default=8888, help="run on the given port", type=int)
+define("port", default=8787, help="run on the given port", type=int)
 
 class Application(tornado.web.Application):
     def __init__(self):
@@ -24,7 +24,7 @@ class UploadHandler(tornado.web.RequestHandler):
 
             if (file_img_name is not None):
                 original_fname = file_img_name['filename']
-                folderpath = "uploads/img/"
+                folderpath = "/home/keydach/projects/electrolab/static/img/"
                 content = file_img_name['body']
         except KeyError:
             print "file_img_name is empty"
@@ -34,7 +34,7 @@ class UploadHandler(tornado.web.RequestHandler):
 
             if (file_svg_name is not None):
                 original_fname = file_svg_name['filename']
-                folderpath = "uploads/svg/"
+                folderpath = "/home/keydach/projects/electrolab/static/text/"
                 content = file_svg_name['body']
         except KeyError:
             print "file_img_name is empty"
@@ -44,7 +44,7 @@ class UploadHandler(tornado.web.RequestHandler):
 
             if (file_pdf_name is not None):
                 original_fname = file_pdf_name['filename']
-                folderpath = "uploads/pdf/"
+                folderpath = "/home/keydach/projects/electrolab/static/pdf/"
                 content = file_pdf_name['body']
         except KeyError:
             print "file_img_name is empty"
